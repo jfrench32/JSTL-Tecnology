@@ -1,0 +1,5 @@
+<c:set var="StudentId" value="152"/>  
+<sql:update dataSource="${db}" var="count">  
+DELETE FROM Students WHERE Id = ?  
+<sql:param value="${StudentId}" />  
+</sql:update>
