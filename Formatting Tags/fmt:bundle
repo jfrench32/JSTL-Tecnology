@@ -1,0 +1,26 @@
+    package com.javatpoint;  
+    import java.util.ListResourceBundle;  
+    public class Simple extends ListResourceBundle {  
+        public Object[][] getContents() {  
+            return contents;  
+        }  
+        static final Object[][] contents = { { "colour.Violet", "Violet" },  
+                { "colour.Indigo", "Indigo" }, { "colour.Blue", "Blue" }, };  
+    }  
+    
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>  
+<html>  
+<head>  
+<title>fmt:bundle Tag</title>  
+</head>  
+<body>  
+  
+<fmt:bundle basename="com.javatpoint.Simple" prefix="colour.">  
+   <fmt:message key="Violet"/><br/>  
+   <fmt:message key="Indigo"/><br/>  
+  <fmt:message key="Blue"/><br/>  
+  
+</fmt:bundle>  
+  
+</body>  
+</html> 
