@@ -1,0 +1,3 @@
+    <sql:update dataSource="${db}" var="count">  
+    INSERT INTO Students VALUES (154,'Nasreen', 'jaha', 25);  
+    </sql:update>   
