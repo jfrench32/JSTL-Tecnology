@@ -1,0 +1,22 @@
+    package com.javatpoint;  
+    import java.util.ListResourceBundle;  
+    public class Main extends ListResourceBundle {  
+        public Object[][] getContents() {  
+            return contents;  
+        }  
+    static final Object[][] contents = { { "vegetable.Potato", "Potato" },  
+                { "vegetable.Tomato", "Tomato" }, { "vegetable.Carrot", "Carrot" }, };  
+    }  
+    
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>  
+<html>  
+<head>  
+<title>fmt:setBundle Tag</title>  
+</head>  
+<body>  
+<fmt:setBundle basename="com.javatpoint.Main" var="lang"/>  
+<fmt:message key="vegetable.Potato" bundle="${lang}"/><br/>  
+   <fmt:message key="vegetable.Tomato" bundle="${lang}"/><br/>  
+  <fmt:message key="vegetable.Carrot" bundle="${lang}"/><br/>  
+</body>  
+</html> 
