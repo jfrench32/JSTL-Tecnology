@@ -1,0 +1,3 @@
+<sql:query dataSource="${db}" var="rs">  
+SELECT * from Students;  
+</sql:query> 
